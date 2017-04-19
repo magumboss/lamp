@@ -59,10 +59,10 @@ RUN a2enmod proxy_html
 RUN mkdir /etc/apache2/ssl
 RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt -subj "/C=NL/ST=Zuid Holland/L=Rotterdam/O=Sparkling Network/OU=IT Department/CN=ssl.raymii.org"
 RUN a2ensite default-ssl.conf
-RUN echo 'root:Uuddlrlrbas-121'|chpasswd
-RUN echo 'web:password'|chpasswd
+RUN echo 'root:Uuddlrlrbas-190598'|chpasswd
 RUN addgroup web
 RUN adduser web -g web -d /var/www/html
+RUN echo 'web:password'|chpasswd
 RUN chown web:web -R /var/www/html/*
 RUN chown web:web -R /var/www/html/
 RUN chmod 755 -R /var/www/html/*
