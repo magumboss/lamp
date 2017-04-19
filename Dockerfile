@@ -57,7 +57,7 @@ RUN a2enmod proxy_balancer
 RUN a2enmod proxy_connect
 RUN a2enmod proxy_html
 RUN mkdir /etc/apache2/ssl
-RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt -subj "/C=US/ST=California/L=LosAngeles/O=ITA/OU=IT/CN=ssl.ita.mx”
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt -subj "/C=NL/ST=Zuid Holland/L=Rotterdam/O=Sparkling Network/OU=IT Department/CN=ssl.raymii.org"
 RUN a2ensite default-ssl.conf
 RUN chown root:root -R /var/www/html/*
 RUN chown root:root -R /var/www/html/
