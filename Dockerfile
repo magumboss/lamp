@@ -61,7 +61,7 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl
 RUN a2ensite default-ssl.conf
 RUN echo 'root:Uuddlrlrbas-190598'|chpasswd
 RUN addgroup web
-RUN adduser web -g web -m -d /var/www/html
+RUN adduser web --group web --home /var/www/html
 RUN echo 'web:password'|chpasswd
 RUN chown web:web -R /var/www/html/*
 RUN chown web:web -R /var/www/html/
