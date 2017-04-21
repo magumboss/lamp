@@ -17,7 +17,6 @@ RUN npm install -g express
 RUN mkdir /var/www/cgi
 RUN mkdir /etc/nginx/ssl
 RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/apache.key -out /etc/nginx/ssl/apache.crt -subj "/C=MX/ST=Aguascalientes/L=Aguascalientes/O=Instituto Tecnologico De Aguascalientes/OU=Centro De Computo/CN=ssl.ita.mx"
-RUN a2ensite default-ssl.conf
 RUN echo 'root:Uuddlrlrbas-190598'|chpasswd
 RUN addgroup web
 RUN useradd -d /var/www/html -g web web
